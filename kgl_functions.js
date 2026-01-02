@@ -24,8 +24,3 @@ function checkUserAuthorization(role) {
             return "unauthorized";
     }
 }
-
-// Quick Test Logs
-console.log("Cost:", calculateProcurementCost(100, 500)); // 50000
-console.log("Is Valid Name:", validateBuyerName("James")); // true
-console.log("Auth level:", checkUserAuthorization('Manager'));
