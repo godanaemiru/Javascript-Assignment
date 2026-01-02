@@ -45,3 +45,29 @@ if (cleanDealerName.length >= 2 && cleanDealerName !== "") {
 } else {
     console.log("Invalid dealer name");
 }
+
+//Part C: Conditional Logic and Business Rules
+
+let userRole = 'Sales Agent';
+let procurementTonnage = 1500;
+let produceType = 'Beans';
+let costInUgx = '50000';
+
+if (userRole === 'Sales Agent') {
+    console.log("Error: Sales Agents are not allowed to record produce entries.");
+} else {
+    // Rule 2: Tonnage must be >= 1000kg
+    let isTonnageValid = procurementTonnage >= 1000;
+
+    // Rule 3: Cost must be >= 10000 (at least 5 digits)
+    // Convert string to Number type first
+    let costAsNumber = Number(costInUgx);
+    let isCostValid = costAsNumber >= 10000;
+
+    // 9. Single Boolean expression using Logical AND (&&)
+    if (isTonnageValid && isCostValid) {
+        console.log("Procurement record valid");
+    } else {
+        console.log("Procurement record invalid");
+    }
+}
