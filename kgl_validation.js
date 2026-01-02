@@ -71,3 +71,31 @@ if (userRole === 'Sales Agent') {
         console.log("Procurement record invalid");
     }
 }
+
+// Part D: Arrays and Produce Management
+
+let kglProduce = ['Beans', 'Grain Maize', 'Cow peas', 'G-nuts', 'Soybeans'];
+
+// 11. Array Operations
+// Add "Green Peas" to the end
+kglProduce.push("Green Peas");
+
+// Remove the first item (oldest stock)
+kglProduce.shift();
+
+// Check if "G-nuts" exists
+let containsGnuts = kglProduce.includes("G-nuts");
+console.log(`Does G-nuts exist? ${containsGnuts}`);
+
+// Log final array and its length
+console.log("Final kglProduce Array:", kglProduce);
+console.log("Total Produce Count:", kglProduce.length);
+
+// 12. Merging arrays
+let branch2Produce = ['Maize', 'Beans'];
+let allProduce = kglProduce.concat(branch2Produce);
+
+console.log("Merged allProduce Array:", allProduce);
+
+
+
