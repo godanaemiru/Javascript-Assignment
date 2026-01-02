@@ -22,3 +22,26 @@ console.log("Type of minimumTonnage:", typeof minimumTonnage);
 console.log("Type of isOperational:", typeof isOperational);   
 console.log("Type of managerName:", typeof managerName);       
 console.log("Type of closedBranches:", typeof closedBranches); 
+
+
+// Part B: String Manipulation and Validation
+
+const dealerNameInput = "  james BOND  ";
+
+let cleanDealerName = dealerNameInput.trim().toLowerCase();
+
+
+cleanDealerName = cleanDealerName
+    .split(' ') // Split into ["james", "bond"]
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // ["James", "Bond"]
+    .join(' '); // "James Bond"
+
+// Log the result using a template literal
+console.log(`Cleaned Dealer Name: ${cleanDealerName}`);
+
+
+if (cleanDealerName.length >= 2 && cleanDealerName !== "") {
+    console.log("Valid dealer name");
+} else {
+    console.log("Invalid dealer name");
+}
